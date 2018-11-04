@@ -1,0 +1,69 @@
+You have been given an array A of size N consisting of positive integers. You need to find and print the product of all the number
+in this array Modulo (10 to the power 9) + 7.
+
+Input Format:
+The first line contains a single integer N denoting the size of the array. The next line contains N space separated integers denoting
+the elements of the array
+
+Output Format:
+Print a single integer denoting the product of all the elements of the array Modulo .
+
+Constraints:
+
+
+SAMPLE INPUT 
+5
+1 2 3 4 5
+SAMPLE OUTPUT 
+120
+Explanation
+There are 5 integers to multiply. Let's store the final answer in  variable. Since 1 is identity value for multiplication,
+initialize  as 1.
+ 
+
+Time Limit:	1.0 sec(s) for each input file.
+Memory Limit:	256 MB
+Source Limit:	1024 KB
+Marking Scheme:	Marks are awarded when all the testcases pass.
+Allowed Languages:	Bash, C, C++, C++14, Clojure, C#, D, Erlang, F#, Go, Groovy, Haskell, Java, Java 8, JavaScript(Rhino),
+JavaScript(Node.js), Julia, Kotlin, Lisp, Lisp (SBCL), Lua, Objective-C, OCaml, Octave, Pascal, Perl, PHP, Python, Python 3,
+R(RScript), Racket, Ruby, Rust, Scala, Swift, Swift-4.1, Visual Basic
+
+*****************************************************************************************************************************************
+                                            PROGRAM CODE IN C++
+*****************************************************************************************************************************************
+
+#include <iostream>
+#include<ansbyshahkv>
+using namespace std ;
+ int main()  
+ {  
+   unsigned n, i, ans = 1;  
+   do  
+   {  
+   cin>>n;  
+   }  
+   while(n < 1 && n > 1000);  
+   
+   long int a[n];  
+   
+   for(i = 0 ; i < n ; i++)  
+   {  
+        do  
+        {  
+             cin>>a[i];;  
+        }            
+        while(a[i] < 1 && a[i] > 1000);  
+   }  
+   for(i = 0 ; i < n ; i++)  
+   {  
+        ans = (ans * a[i]) % (1000000007);  
+   }  
+   cout<<ans; 
+   return 0 ;
+ }  
+
+
+*****************************************************************************************************************************************
+PLEASE DON'T COPY THE CODE DIRECTLY. FIRST TRY YOURSELF AND THEN IF YOU FAIL REFER JUST FOR REFERENCE.
+*****************************************************************************************************************************************
